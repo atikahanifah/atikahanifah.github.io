@@ -1,0 +1,78 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Player</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #ffd194;
+        }
+       
+        video{
+            float: center;
+            
+            width: 900px;
+            
+        }
+        .button a{
+            text-decoration: none;
+            font-size: 1rem;
+            color: #111;
+        }
+        @media screen and (max-width:460px){
+            video{
+                display: flex;
+               justify-content: center;
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+         
+        }
+        @media screen and (max-width:540px){
+            video{
+                display: flex;
+               justify-content: center;
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        @media screen and (max-width:768px){
+            video{
+                display: flex;
+               justify-content: center;
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        @media screen and (max-width:800px){
+            video{
+                display: flex;
+               justify-content: center;
+                width: 100%;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+        <div class="video-container">
+            <video controls src="2.mp4"></video>
+        </div>
+</body>
+</html>

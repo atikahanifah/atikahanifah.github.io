@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-rbsA9S3IZ29A5Xt5hJF8j/uwFj4eNNf5FMCeE5p9m0jq2Sz1P2AIh68V5DI5Lh/Q" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/flexbox-center-container.css" media="all">
+  <link rel="stylesheet" href="css/system-fonts.css" media="all">
+  <link rel="stylesheet" href="css/style.css" media="all">
+</head>
+
+<body>
+  <canvas id=c></canvas>
+  <canvas id="confetti"></canvas>
+  <div class="container" id="count">
+    <h1 id="head">Countdown to your birthday:</h1>
+    <ul>
+      <li><span id="day"></span>days</li>
+      <li><span id="hour"></span>hours</li>
+      <li><span id="minute"></span>minutes</li>
+      <li><span id="second"></span>seconds</li>
+    </ul>
+  </div>
+  
+  <div id="merrywrap" class="merrywrap">
+    
+    <canvas id="snowfall"></canvas>
+    <div class="giftbox">
+      
+      <div class="cover">
+        <div></div>
+      </div>
+      <div class="box"></div>
+      
+    </div>
+    <div class="description">
+      <span>I have something for you 😊</span>
+    </div>
+    <a href="video.html" class="next-button">watch the video &raquo;</a>
+  </div>
+  
+  
+</body>
+<script src="scripts/confetti.min.js" charset="utf-8"></script>
+<script src="scripts/index.js" charset="utf-8"></script>
+<script src="scripts/home.js"></script>
+<script>
+  function handleBackButton() {
+  // Lakukan refresh halaman saat tombol "Back" ditekan
+  location.reload();
+}
+
+// Tambahkan event listener untuk event popstate (tombol "Back" ditekan)
+window.addEventListener('popstate', handleBackButton);
+
+
+
+
+</script>
+
+
+
+</html>

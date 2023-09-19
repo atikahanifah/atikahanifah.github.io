@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #1f293a;
+}
+.container{
+    position: relative;
+    width: 256px;
+    height: 256px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container span{
+    position: absolute;
+    left: 0;
+    width: 32px;
+    height: 6px;
+    background: #2c4766;
+    border-radius: 8px;
+    transform-origin: 128px;
+    transform: scale(2.2) rotate(calc(var(--i)*(360deg / 50)));
+    animation: animateBlink 3s linear infinite;
+    animation-delay: calc(var(--i)*(3s/50));
+}
+@keyframes animateBlink{
+    0%{
+        background: #0ef;
+    }
+    25%{
+        background: #2c4766;
+    }
+}
+.login-box {
+    position: absolute;
+    width: 400px;
+    
+    
+}
+.login-box form {
+    width: 100%;
+    padding: 0 50px;
+}
+h2{
+    font-size: 2em;
+    color: #0ef;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    margin: 25px 0;
+}
+.input-box input{
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #2c4766;
+    outline: none;
+    border-radius: 40px;
+    font-size: 1em;
+    color: #fff;
+    padding: 0 20px;
+    transition: .5s ease;
+}
+.input-box label{
+    font-size: 16px;
+}
+.input-box input:focus,
+.input-box input:valid{
+   border-color: #0ef;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #fff;
+    pointer-events: none;
+}
+.note{
+    margin: -15px 8px 10px;
+}
+.note p{
+    font-size: .70em;
+    color: #c5c5c5;
+    text-decoration: none;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: 1px;
+    font-size: .8em;
+    background: #1f293a;
+    padding: 0 6px;
+    color: #0ef;
+}
+.btn{
+    width: 100%;
+    height: 45px;
+    background: #0ef;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #1f293a;
+    font-weight: 600;
+}
+.pop-up-modal {
+    position: fixed;
+    padding: 8px 32px;
+    background-color: #cc0000;
+    color: white;
+    bottom: -100px;
+    opacity: 0;
+    text-transform: capitalize;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 10px;
+    text-align: center;
+    transition: bottom ease-in-out 0.3s, opacity ease-in-out 0.3s;
+}
+
+.pop-up-modal h2 {
+    padding: 6px;
+    font-size: 24px;
+    color: #fff;
+}
+
+.pop-up-modal p {
+    font-size: 12px;
+    margin-bottom: 6px;
+}
+
+.pop-up-modal.display {
+    bottom: 32px;
+    opacity: 1;
+}
+@media screen and (max-width:460px){
+        
+        .login-box{
+            width: 350px;
+        }
+        h2{
+            font-size: 20px;
+        }
+        .input-box label{
+            font-size: 12px;
+        }
+        
+        .btn{
+            width: 150px;
+            height: 35px;
+            margin-left: 50px;
+        }
+        .container span{
+            width: 25px;
+            height: 6px;
+            transform-origin: 80px;
+        }
+        .note p{
+            font-size: 10px;
+            margin-left: 12px;
+        }
+        .pop-up-modal {
+            padding: 8px 20px;
+        }
+        
+        .pop-up-modal h2 {
+            font-size: 16px;
+        }
+        
+        .pop-up-modal p {
+            font-size: 11px;
+            margin-bottom: 6px;
+        }
+        .pop-up-modal.display {
+            bottom: 75px;
+        }
+    }
+@media(max-width: 540px){
+    .login-box{
+        width: 350px;
+    }
+    h2{
+        font-size: 20px;
+    }
+    .input-box label{
+        font-size: 12px;
+    }
+    
+    .btn{
+        width: 150px;
+        height: 35px;
+        margin-left: 50px;
+    }
+    .container span{
+        width: 23px;
+        height: 6px;
+        transform-origin: 100px;
+        margin: 20px ;
+    }
+    .note p{
+        font-size: 10px;
+        margin-left: 12px;
+    }
+    .pop-up-modal {
+        padding: 8px 20px;
+    }
+    
+    .pop-up-modal h2 {
+        font-size: 16px;
+    }
+    
+    .pop-up-modal p {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    .pop-up-modal.display {
+        bottom: 30px;
+    }
+}
+@media(min-width: 768px){
+    .container{
+        display: grid;
+    place-items: center; /* Untuk mengatur elemen di tengah baik secara horizontal maupun vertikal */
+    height: 100vh;
+    }
+}
